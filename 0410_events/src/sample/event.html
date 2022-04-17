@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="[클로저스] 이능 액션! 클로저스" />
+    <meta name="copyright" content="&copy; 2014 NEXON Corp. &amp; Nadic Corp. All Rights Reserved." />
+    <meta name="author" content="NEXON Korea" />
+    <meta name="keywords" content="NEXON, 넥슨, NEXON Korea, 넥슨코리아, 클로저스" />
+
+    
+    <meta property="og:url" content="http://closers.nexon.com/Events2022/0407/Advancement" />
+    <meta property="og:image" content="https://ssl.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/img_sns.jpg" />
+    <meta property="og:title" content="[클로저스] 바이올렛 신규 승급! 극강의 궁극기를 획득하라!" />
+    <meta property="og:description" content="범접할 수 없는 강력한 궁극기와 신규 스킬 컷인 획득이 가능한 바이올렛의 신규 승급에 도전하세요!" />
+    <title>이능 액션! 클로저스</title>
+
+
+    
+
+    <link rel="stylesheet" type="text/css" href="https://ssl.nexon.com/s3/closers/event/2017/templete/style.topBar.css" />
+    <link rel="stylesheet" type="text/css" href="https://ssl.nexon.com/s3/closers/event/2022/220407_advancement_zz103/style.css?v=20220410132630" />
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/lib/pixi.min.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/common/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/lib/closers.ui.lib.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/event/2017/templete/closers.topBar.event.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/event/2021/210325_foolsday_506320/skrollr.js"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/closers/event/2022/220407_advancement_zz103/event.ui.js?v=20220410132630"></script>
+
+
+
+    <script type="text/javascript" src="/Contents/plugins/clipboard/clipboard.min.js?v=20220409172200"></script>
+<script type="text/javascript" src="/Contents/plugins/vue/vue.min.js?v=20220409172200"></script>
+
+        <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_head.js?v=20220410132630" charset="euc-kr"></script>
+    <script type="text/javascript" src="https://ssl.nexon.com/s1/p2/ps.min.js?v=20220410132630" charset="utf-8" data-name="PS" data-ngm="true" data-nxlogin="true"></script>
+
+</head>
+<body>
+    <!-- Body Start Area -->
+    <input name="__RequestVerificationToken" type="hidden" value="eGVFEkxkQ76qfe83p9wkyPl1CcJIQ9h7gzvmAz7TwOniyHQpTvLFdx0KasT9zNh5Ejbm1hEvWZ9hSTQMDRl4RfSNM4k1" />
+
+<script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_bodystart.js?v=20220410132630" charset="euc-kr"></script><script src="https://rs.nxfs.nexon.com/common/js/gnb.min.js?v=20220410132630" data-gamecode="106497" data-ispublicbanner="false"></script>
+    <!-- Contents Area -->
+    
+
+
+
+
+<div class="loader"></div>
+
+<div id="wrap">
+    <!-- 이벤트페이지 공통 Navigation -->
+    <div id="topArea" class="clearFix EventVue_App_EventNavigationArea">
+    <div class="group">
+        <h1><a href="/Main/Index"><img src="https://ssl.nexon.com/s2/game/closers/2017/newTopBar/img_logo.png" alt="클로저스"></a></h1>
+        <p class="btnStart"><a href="#" onclick="CommonObject.SingleModule.StartGame(); return false;">게임 스타트</a></p>
+        <div class="etcArea">
+            <ul class="snsArea clearFix">
+                <li><a href="/Main/Index" class="home">홈으로 이동하기</a></li>
+                <li><a href="#" class="tw" @click.prevent="ShareTwitter">트위터로 공유하기</a></li>
+                <li><a href="#" class="fb" @click.prevent="ShareFacebook">페이스북으로 공유하기</a></li>
+            </ul>
+        </div>
+        <div class="slideArea">
+            <div class="mask">
+                <ul class="evLink clearFix">
+                </ul>
+                <p class="evCalendar">
+                    <a href="/News/Events/List?n4ArticleCategorySN=2">진행중인 이벤트 바로가기</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // 이벤트페이지 공통 Navigation
+    topBar.json = "[{\"bg\":\"https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5701649607486866921\",\"link\":\"/events2022/0407/advancement\",\"target\":\"self\"},{\"bg\":\"https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053131248260613433\",\"link\":\"/News/Events/View?n4ArticleSN=3041\\u0026n4ArticleCategorySN=2\",\"target\":\"self\"},{\"bg\":\"https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4836958479031731489\",\"link\":\"/events2022/0407/goodday \",\"target\":\"self\"},{\"bg\":\"https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4981073628452882019\",\"link\":\"/News/Events/View?n4ArticleSN=3039\\u0026n4ArticleCategorySN=2\",\"target\":\"self\"},{\"bg\":\"https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764900863518967149\",\"link\":\"/events2022/0324/blossom \",\"target\":\"self\"},{\"bg\":\"https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5701649573127128740\",\"link\":\"/events2022/0324/another\",\"target\":\"self\"}]";
+</script>
+
+
+    <div id="contents">
+        <div id="visual">
+            <div class="inner">
+                <h1><a href="/Main/Index">CLOSERS THE CHARACTER</a></h1>
+                <h2 class="blind">신규승급 UPDATE</h2>
+                <p class="blind">2022. 4. 7</p>
+                <h3 class="blind">FETAL CREW 결사대원 바이올렛</h3>
+                <p class="btn_movie"><a href="#pop_video"></a></p>
+                <span class="rock"></span>
+            </div>
+        </div>
+
+        <div class="tab_nav_wrap">
+            <ul class="tab_nav">
+                <li class="tab1 active"><a href="#tab1"><span class="blind">바이올렛 신규 승급 소개</span></a></li>
+                <li class="tab2"><a href="#tab2"><span class="blind">승급 기념 이벤트 & 프리패스</span></a></li>
+            </ul>
+        </div>
+
+        <div id="tab_wrap">
+            <div id="tab1" class="tab_cont active">
+                <div class="section section1">
+                    <div class="inner">
+                        <div class="blind">
+                            <h3>신규 승급 소개</h3>
+                            <p>검은 책의 사서 솔로몬이 바이올렛에게 내리는 시련을 만나보세요</p>
+                            <h4>승급 방법</h4>
+                            <ul>
+                                <li>
+                                    센텀시티에서 미니휠 NPC -> [새로운 시련] 퀘스트 수락
+                                    <em>- 조건 : 캐릭터 레벨 90 & 태스크 포스 전직 완료 센텀시티 지역 퀘스트 완료</em>
+                                </li>
+                                <li>사냥꾼의 밤 지역 입장기 -> 각 캐릭터별 승급 던전 플레이</li>
+                                <li>단계별 퀘스트를 클리어하여 신규 승급 진행</li>
+                            </ul>
+                            <h4>입장 조건</h4>
+                            <ul>
+                                <li>캐릭터 레벨 : 90</li>
+                                <li>적정 종합 전투력 : 10,000,000</li>
+                                <li>기어 레벨 : 160이상</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section2">
+                    <div class="inner">
+                        <div class="blind">
+                            <h4>승급 전용 데미지 폰트</h4>
+                            <h4>승급 코스튬 풀세트</h4>
+                            <p>전 파츠 1성 지급, 업그레이드 및 거래 불가</p>
+                            <h4>승급 스킬 일러스트 컷잇</h4>
+                        </div>
+                        <p class="btn_download"><a href="https://closers.vod.nexoncdn.co.kr/event/2022/220407_advancement_zz103/cut1.zip">다운로드</a></p>
+                    </div>
+                </div>
+                <div class="section section3">
+                    <p class="btn_freepass"><a href="">파밍 없이 단 하루만에 승급하고 싶다면? 바이올렛 승급 프리패스 패키지 바로가기</a></p>
+                </div>
+                <div class="section section4">
+                    <h3 class="blind">신규 스킬</h3>
+                    <p class="blind">신규 승급 시 신규 액티브 스킬 2종 & 궁극기 1종 획득 / 패시브 1종 개방</p>
+                    <div>
+                        <em class="blind">FETAL CREW</em>
+                        <h4 class="blind">결사대원 바이올렛</h4>
+                        <div class="info info1">
+                            <div class="blind">
+                                <p>“하이드, 우리 차례가 왔어요. 검을 주세요. 전장을 장악할 테니!”</p>
+                                <h5>신규 액티브</h5>
+                                <dl>
+                                    <dt>아머 브레이커</dt>
+                                    <dd>일시적으로 대검의 파괴력을 극대화해서 묵직한 베기 기술을 시전한다.</dd>
+                                    <dt>꽃바람 연격</dt>
+                                    <dd>하이드와 함께 빠른 연계기를 펼친 다음, 강력한 마무리 일격을 시전한다.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="info info2">
+                            <div class="blind">
+                                <h5>신규 궁극기</h5>
+                                <dl>
+                                    <dt>궁극기 : 퀸스 저지먼트</dt>
+                                    <dd>바이올렛과 하이드의 모든 위상력을 담은 클레이모어로 궁극의 일격을 펼친다.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section5">
+                    <div class="inner">
+                        <p class="copy">NEXON NADDIC GAMES Copyright ⓒ 2014 NEXON Korea Corporation & NADDIC GAMES. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab_cont">
+                <div class="section section1">
+                    <div class="inner">
+                        <h3 class="blind">바이올렛 결사대원 신규 승급기념 던전 클리어 이벤트</h3>
+                        <p class="blind">이벤트 기간 : 2022.3.10(목) 점검 후 ~ 2022.4.7(목) 점검 전 </p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span class="blind">클리어 횟수</span></th>
+                                    <th scope="col"><span class="blind">지급 아이템</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="blind">5</span></td>
+                                    <td><span class="blind">매실 과즙 x 2</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">10</span></td>
+                                    <td><span class="blind">일반 강화기 연료 x 5</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">20</span></td>
+                                    <td><span class="blind">일반 D 컴포넌트 : 기어 x 3</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">30</span></td>
+                                    <td><span class="blind">일반 D 컴포넌트 : 코스튬 x 2</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">40</span></td>
+                                    <td><span class="blind">완벽한 PNA 진화 키트 x 5</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">50</span></td>
+                                    <td><span class="blind">초월의 비약 x 1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">60</span></td>
+                                    <td><span class="blind">코스튬 퓨전 섬유 x 1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">70</span></td>
+                                    <td><span class="blind">2S 섬성의 격돌 액세서리 풀세트 x 1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">85</span></td>
+                                    <td><span class="blind">미니 바이올렛 펫의 성체 보관함 x 1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">100</span></td>
+                                    <td><span class="blind">3성 보스 무기 상자 (1종) x 1</span><a href="#pop_tooltip" class="btn_more"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="section section2">
+                    <div class="inner">
+                        <div class="blind">
+                            <h3>바이올렛 결사대원 프리패스 패키지 출시</h3>
+                            <ul>
+                                <li>바이올렛 결사대원 코스튬 전 파츠</li>
+                                <li>작전구역 프리패스 - 솔로몬의 시련 x 6</li>
+                                <li>유니온 특제 행운 적합률 안정제 x 100</li>
+                                <li>강화기백신 x 2</li>
+                                <li>초월의 비약 x 3</li>
+                                <li>슬롯 타입 변경툴 x 4</li>
+                                <li>알파 이퀄라이저 x 3</li>
+                                <li>코스튬 퓨전 섬유 x 2</li>
+                            </ul>
+                            <p>바이올렛 캐릭터로만 개봉 가능</p>
+                            <p>모든 구성품이 29,900원(캐릭터당 1회 구매 가능)</p>
+                            <strong>패키지 구매 시 파밍 없이 1일만에 승급 가능!</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section3">
+                    <div class="inner">
+                        <h3 class="blind">아직 모르시는 분들을 위한 작은 TIP!</h3>
+                        <ul class="tip_wrap">
+                        </ul>
+                    </div>
+                </div>
+                <div class="section section4">
+                    <div class="inner">
+                        <h4>유의사항</h4>
+                        <ul>
+							<li>던전 클리어 이벤트는 바이올렛 캐릭터로만 참여 가능하며, 피로도 10 이상 소모 던전을 클리어해야 횟수가 카운팅 됩니다.</li>
+							<li>던전 클리어 이벤트의 보상 확인 및 수령은 게임 내 하단 [EV] 버튼을 통해 진행 가능합니다.&nbsp;</li><li>계정 내 바이올렛 캐릭터의 던전 클리어 횟수는 캐릭터별로 누적되며, 보상은 계정당 1회만 획득 가능합니다.</li>
+							<li>던전 클리어 이벤트 보상 [2S 섬성의 격돌 액세서리 풀세트]는 3성 S 튜닝 아이템으로 지급되며, 계정창고 이동 및 거래가 불가능합니다.</li>
+							<li>던전 클리어  이벤트  보상 관련  미 사용한 일부 아이템 및 상자, 구성품은 2022년 12월 31일(토) 오전 9시에 일괄 삭제됩니다.</li>
+							<li>바이올렛 던전 클리어 이벤트 보상 [3성 보스 무기 상자(1종)] 개봉 시 획득되는 무기 코스튬은 계정창고 이동 및 블랙마켓 거래가 불가합니다.</li>
+							<li>바이올렛 결사대원 프리패스 패키지는 바이올렛 캐릭터로만 개봉이 가능합니다.</li>
+							<li>바이올렛 결사대원 프리패스 패키지를 통해 획득한 [승급 코스튬]은 2성 파츠로 지급되며, 계정창고 이동 및 블랙마켓 거래가 가능합니다.</li>
+							<li>바이올렛 결사대원 프리패스 패키지를 통해 획득한 [작전구역 프리패스 – 솔로몬의 시련] 아이템은 계정창고 이동이 가능합니다.</li>
+						</ul>
+
+                        <p class="copy">NEXON NADDIC GAMES Copyright ⓒ 2014 NEXON Korea Corporation & NADDIC GAMES. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //===========================================================================
+            #contents END
+    =========================================================================== // -->
+    <!-- 영상 팝업 -->
+    <div class="layerPop" id="pop_video">
+        <div class="layerBody">
+            <div class="ytb_wrap">
+                <div id="videoArea" class="video"><div class="ytb"></div></div>
+                <p class="btn close"><button type="button">닫기</button></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- tooltip-->
+    <div id="pop_tooltip" class="layerPop">
+        <div class="layerBody">
+            <p class="btn close"><button type="button">닫기</button></p>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+</div>
+
+    <!-- PriorityCommonJs Area -->
+    <script type="text/javascript" src="/Contents/js/_Common.js?v=20220409172200"></script>
+
+    
+<script>
+    // Init CommonJsModel
+    CommonObject.Model.GameWebInfo.channelServiceType = 'NEXON';
+    CommonObject.Model.GameWebInfo.channelCode = '6';
+    CommonObject.Model.GameWebInfo.channelingGameStatusCode = '0';
+    CommonObject.Model.GameWebInfo.gameCode = '106497';
+    CommonObject.Model.GameWebInfo.gameStartLogRequireName = '/Events2022/0407/Advancement';
+</script>
+    
+
+
+<script>
+    // Init CommonJsModel
+    CommonObject.Model.Messages.basket_Messages = [{"Key":"CanRemoveOnlyMyArticle","Value":"본인 글만 삭제 가능합니다."},{"Key":"CompleteCopy","Value":"복사되었습니다."},{"Key":"CanModifyOnlyMyArticle","Value":"본인 글만 수정 가능합니다."},{"Key":"AlreadyJoinSurvey","Value":"이미 참여한 설문조사입니다."},{"Key":"NotJoinDate","Value":"참여기간이 아닙니다."},{"Key":"CanNotAccess","Value":"접근할 수 없습니다."},{"Key":"RequireNoMoreThan200Text","Value":"200글자 이내로 입력하세요."},{"Key":"CanNotRecommendMyArticle","Value":"본인글은 추천 할 수 없습니다."},{"Key":"QuestionDoYouWantToDelete","Value":"삭제하시겠습니까?"},{"Key":"AlreadyRemoveArticle","Value":"이미 삭제된 글입니다."},{"Key":"RequireNoMoreThan50Text","Value":"50글자 이내로 입력하세요."},{"Key":"RequireAttachImage","Value":"이미지 첨부 시 글 등록이 가능합니다."},{"Key":"RequireAttachMovie","Value":"영상 첨부 시 글 등록이 가능합니다."},{"Key":"AlreadyReportArticle","Value":"이미 신고된 글입니다."},{"Key":"RequireNoMoreThan12Text","Value":"12글자 이내로 입력하세요."},{"Key":"RequireNoMoreThan10Text","Value":"10글자 이내로 입력하세요."},{"Key":"CanNotReportMyArticle","Value":"본인글은 신고할 수 없습니다."},{"Key":"CompleteRemove","Value":"삭제되었습니다."},{"Key":"CompleteSurveyJoin","Value":"설문조사에 참여하였습니다."},{"Key":"RequireLogin","Value":"로그인이 필요한 서비스입니다."},{"Key":"RequireTitle","Value":"제목을 입력하세요."},{"Key":"AlreadyCreateSurvey","Value":"이미 생성된 설문조사가 있습니다."},{"Key":"Error","Value":"오류가 발생하였습니다."},{"Key":"RequireSetDefaultGameCharacter","Value":"대표캐릭터 설정이 필요한 서비스입니다."},{"Key":"RequireContentText","Value":"내용을 입력하세요."},{"Key":"ErrorAjax","Value":"Ajax 오류가 발생하였습니다."},{"Key":"RequireChannelingAgreeOK","Value":"이용약관 및 정보제공 동의가 필요한 서비스 입니다."},{"Key":"CanNotUseUnregisteredSticker","Value":"등록되지 않은 스티커는 사용할 수 없습니다."},{"Key":"RequireCategorySN","Value":"카테고리를 선택해주세요."},{"Key":"RequireCreateGameCharacter","Value":"캐릭터 생성이 필요한 서비스입니다."},{"Key":"InformationArticleCreate","Value":"※ 욕설이나 비방, 타인의 저작권 침해 등 게시판 운영정책에 어긋나는 \u0026#10; 게시물 등록 시 게시글 삭제 및 글쓰기 제한등의 불이익을 받을 수 있습니다."},{"Key":"SuccessRegistered","Value":"등록되었습니다."},{"Key":"CanNotWriteArticleSanctionPeriod","Value":"제재기간에는 글을 작성하실 수 없습니다."},{"Key":"CompleteReportArticle","Value":"신고내용이 접수되었습니다."},{"Key":"RequireKeywordForSearchMinTwoLength","Value":"검색어를 두 글자 이상 입력하세요."},{"Key":"RequireContentsMinTenLength","Value":"10글자 이상 입력하세요."},{"Key":"Success","Value":"Success"}];
+</script>
+
+    <!-- Body End Area -->
+    
+    <script type="text/javascript" src="/Contents/js/Areas/Events2022/0407/C5FD2123E4.vue.js?v=20220410132630"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Init Ajax
+            EventVue.Models._Common.basket_AjaxUrl = '_C5FD2123E4';
+
+            // Init
+            EventVue.Models._Common.basket_EventTitle = '[클로저스] 바이올렛 신규 승급! 극강의 궁극기를 획득하라!';
+            EventVue.Models._Common.basket_EventUrl = 'http://closers.nexon.com/Events2022/0407/Advancement';
+            EventVue.Models._Common.basket_Messages = '{"0":"정상","-1":"이용약관 및 정보제공 동의가 필요한 서비스 입니다.","-2":"로그인이 필요한 서비스입니다.","-3":"캐릭터 정보가 없습니다.","-4":"이벤트 기간이 아닙니다.","-5":"이미 받아가신 기록이 있는걸요?\u003cbr /\u003e다시 확인 해 보세요!","-9997":"오류가 발생하였습니다.","-9998":"오류가 발생하였습니다.","-9999":"오류가 발생하였습니다."}';
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRVR7B"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager -->
+<!-- Google Oid Script -->
+<script>
+    $(window).load(function () {
+        ga('create', 'UA-79926226-1', 'auto');
+        ga('set', 'dimension1', "0");
+        ga('set', 'dimension2', document.domain);
+        ga('send', 'pageview');
+        dataLayer.push({'oid':'0'});
+    });
+</script>
+
+<!-- Global site tag (gtag.js) - AdWords: 866019931 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-866019931"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-866019931');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '215314022251215'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=215314022251215&ev=PageView&noscript=1" />
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<!-- Facebook SDK -->
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1039428882801247',
+            xfbml: true,
+            version: 'v2.7'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- End Facebook SDK -->
+<!-- Twitter universal website tag code -->
+<script>
+    !function (e, t, n, s, u, a) {
+        e.twq || (s = e.twq = function () {
+            s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+        }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
+            a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+    }(window, document, 'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init', 'nv4dl');
+    twq('track', 'PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+        <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_bodyend.js?v=20220410132630" charset="euc-kr"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // DomainSet
+        document.domain = 'nexon.com';
+
+
+        if (utilGetCookie("ck_1126Today_pop1") == "" || utilGetCookie("ck_1126Today_pop1") == null) {
+            $('#pop_attack').show();
+        }
+
+        $("#btn_checkNotToday211126_1").on('click', function (e) {
+            utilSetCookie('ck_1126Today_pop1', '1', 1);
+            $("#pop_attack").hide();
+        });
+    });
+
+
+
+    function utilSetCookie(name, value, expiredays) {
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + "; domain=closers.nexon.com";
+    }
+
+    function utilGetCookie(name) {
+        var nameOfCookie = name + "=";
+        var x = 0;
+        while (x <= document.cookie.length) {
+            var y = (x + nameOfCookie.length);
+            if (document.cookie.substring(x, y) == nameOfCookie) {
+                if ((endOfCookie = document.cookie.indexOf(";", y)) == -1) {
+                    endOfCookie = document.cookie.length;
+                }
+                return unescape(document.cookie.substring(y, endOfCookie));
+            }
+            x = document.cookie.indexOf(" ", x) + 1;
+            if (x == 0)
+                break;
+        }
+        return "";
+    }
+</script>
+</body>
+</html>

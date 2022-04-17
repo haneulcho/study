@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// Path
+// -----------------------------------------------------------------------------
+$base-sprite-image-url: 'spr_asset.png' !default;
+$base-sprite-image-width: 470px !default;
+$base-sprite-image-height: 540px !default;
+
+// -----------------------------------------------------------------------------
+// Container
+// -----------------------------------------------------------------------------
+$artboard-width: 300px !default;
+$min-width: 320px !default;
+$max-width: 1280px !default;
+$container-padding: 0 !default;
+
+// -----------------------------------------------------------------------------
+// Color
+// -----------------------------------------------------------------------------
+$brand-color: #E3445A !default;
+$background-color: #F3F3F3 !default;
+$text-color: rgb(34, 34, 34) !default;
+$link-color: rgb(34, 34, 34) !default;
+$selection-color: yellow !default;
+$color-light-grey: rgb(237, 237, 237) !default;
+$color-mid-grey: rgb(153, 153, 153) !default;
+$color-dark-grey: rgb(68, 68, 68) !default;
+$color-white: white !default;
+$color-black: black !default;
+
+// -----------------------------------------------------------------------------
+// Breakpoint
+// -----------------------------------------------------------------------------
+$breakpoint-mobile-small: 320px;
+$breakpoint-mobile: 360px;
+$breakpoint-tablet: 640px;
+$breakpoint-desktop: 1024px;
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+$base-font-size: 16px !default;
+$base-letter-spacing: -0.2px;
+$base-font-weight: (
+	'normal': 400,
+	'light': 300,
+	'bold': 700,
+) !default;
+
+$base-font-system:
+-apple-system,
+BlinkMacSystemFont,
+'Noto Sans KR',
+Roboto,
+'Apple SD Gothic Neo',
+'Helvetica Neue',
+Helvetica,
+Arial,
+'Malgun Gothic',
+'맑은 고딕',
+Dotum,
+'돋움',
+sans-serif !default;
+
+$base-font-system-nexon:
+'NEXON Gothic',
+-apple-system,
+BlinkMacSystemFont,
+Roboto,
+'Apple SD Gothic Neo',
+'Helvetica Neue',
+Helvetica,
+Arial,
+'Malgun Gothic',
+'맑은 고딕',
+Dotum,
+'돋움',
+sans-serif !default;
+
+$base-font-system-nexon-bold:
+'NEXON Gothic Bold',
+-apple-system,
+BlinkMacSystemFont,
+Roboto,
+'Apple SD Gothic Neo',
+'Helvetica Neue',
+Helvetica,
+Arial,
+'Malgun Gothic',
+'맑은 고딕',
+Dotum,
+'돋움',
+sans-serif !default;
+
+$base-font-stack: (
+	noto: (
+		light: (
+			family: $base-font-system,
+			weight: 300
+		),
+		regular: (
+			family: $base-font-system,
+			weight: 400
+		),
+		bold: (
+			family: $base-font-system,
+			weight: 700
+		)
+	),
+	nexon: (
+		regular: (
+			family: $base-font-system-nexon,
+			weight: 400
+		),
+		bold: (
+			family: $base-font-system-nexon-bold,
+			weight: 700
+		)
+	)
+);
+
+$rem-baseline: $base-font-size;
+$rem-fallback: false !default;
+$rem-px-only: false !default;

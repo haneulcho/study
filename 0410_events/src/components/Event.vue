@@ -1,11 +1,9 @@
 <template>
-  <div>
-    
+  <div id="contents">
+    <TabContents />
   </div>
 </template>
-<script setup>
 
+<script setup>
+import TabContents from '@/components/Tab.vue'
 </script>
-<style lang="scss">
-  
-</style>
