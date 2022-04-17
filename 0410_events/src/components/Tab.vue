@@ -1,5 +1,10 @@
 <template>
-  <div class="tab_nav_wrap">
+  <!-- tab_nav_wrap - 필수 클래스 -->
+  <!-- scrolled - isTabFixed 스크롤 위치에 따라 바꿀 클래스 -->
+  <div :class="[
+    'tab_nav_wrap',
+    { 'scrolled': isTabFixed },
+  ]">
     <ul class="tab_nav">
       <li
         v-for="(tab, index) in tabs"
@@ -19,34 +24,21 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { throttle } from 'throttle-debounce'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 import Tab1 from '@/components/Tab1.vue'
 import Tab2 from '@/components/Tab2.vue'
 
-import UsePopup from '@/composables/UsePopup'
-
-const {
-  openPopupIds,
-  closePopup,
-  openPopup,
-  handleIds
-} = UsePopup()
-
-console.log('얘는 Tab.vue')
-console.log(openPopupIds.value)
-console.log('얘는 Tab.vue')
-
-
-onMounted(() => {
-  handleIds('끝!')
+const props = defineProps({
+  tabs: {
+    type: Array,
+    default: () => ([])
+  },
+  visualHeight: {
+    type: Number,
+  }
 })
-
-
-const tabs = ref([
-  { title: '바이올렛 신규 승급 소개', class: 'tab1', href: 'tab1', height: 2969 },
-  { title: '승급 기념 이벤트 & 프리패스', class: 'tab2', href: 'tab2', height: 2492 }
-])
 
 const currentTabIndex = ref(0)
 
@@ -59,10 +51,33 @@ const handleClickTab = (tabIndex = 0) => {
   console.log(`isTab2Active: ${isTab2Active.value}`)
 }
 
-
-
-
 // DOM Element 저장
 // const tab1 = ref(null)
 // const tab2 = ref(null)
+
+const isTabFixed = ref(false)
+
+const fixTabWrapElement = () => {
+  // 현재 스크롤바 위치
+  const scrollY = window.pageYOffset || window.scrollY
+
+  // 특정 수치를 지나면 scrolled 클래스를 추가
+  const visualHeight = props.visualHeight
+
+  // 삼항연산자로 수정
+  isTabFixed.value = scrollY >= visualHeight
+}
+
+const throttleFunc = throttle(100, () => {
+  fixTabWrapElement()
+})
+
+onMounted(() => {
+  window.addEventListener('scroll', throttleFunc)
+  throttleFunc()
+})
+
+onBeforeUnmount(() => {
+  throttleFunc.cancel()
+})
 </script>

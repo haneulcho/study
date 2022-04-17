@@ -6,10 +6,17 @@
 	* RELEASE: 22.04.07
 	* Image Path: https://ssl.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/
 ================================================================ */
-
+body {overflow-x:hidden;background-color:#000}
+#app_study, #contents {position:relative;margin:0 auto}
+#contents {overflow:hidden;min-width:1200px;max-width:2560px}
+.loader {z-index:190;position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000}
+.inner {position:relative;width:1200px;height:100%;margin:0 auto}
+.layerPop .confirm button, .layerPop .close button, .ir {display:block;overflow:hidden;text-indent:-9999px;font-size:0 !important}
+.section {position:relative;width:100%;background-position:50% 0;background-repeat:no-repeat}
+.tab_cont h3 span {display:block;background-repeat:no-repeat;text-indent:-9999px}
 
 /* nav */
-.tab_nav_wrap {z-index:15;position:absolute;left:0;top:886px;width:2560px;height:224px;min-width:2560px;/* min-width:1280px; */background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/nav/bg_nav.png') 50% 0 no-repeat}
+.tab_nav_wrap {z-index:15;position:absolute;left:50%;top:886px;width:2560px;height:224px;min-width:2560px;margin-left:-1280px;/* min-width:1280px; */background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/nav/bg_nav.png') 50% 0 no-repeat}
 .tab_nav_wrap.scrolled {position:fixed;top:-25px}
 .tab_nav {position:absolute;left:50%;top:25px;display:flex;width:1200px;height:119px;margin-left:-600px}
 .tab_nav:after {z-index:16;position:absolute;left:-680px;top:0;display:block;width:537px;height:176px;content:'';background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/visual/bg_weapon.png') no-repeat}

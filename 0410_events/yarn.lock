@@ -433,6 +433,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+throttle-debounce@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-4.0.1.tgz#f86656fe9c8a6b8218952ef36c3bf225089b1baf"
+  integrity sha512-s3PedbXdZtr8v3J5Sxd5T/GmWG80BcK5GVpwDdvgEaUXsaMqQe4zxgmC4TA7B8luSDCPxo3CeSBS3F9rF1CZwg==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
