@@ -25,7 +25,13 @@
 
 <script setup>
 import { throttle } from 'throttle-debounce'
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import {
+  ref,
+  computed,
+  onMounted,
+  onBeforeUnmount,
+  watch
+} from 'vue'
 
 import Tab1 from '@/components/Tab1.vue'
 import Tab2 from '@/components/Tab2.vue'
@@ -40,22 +46,13 @@ const props = defineProps({
   }
 })
 
-const currentTabIndex = ref(0)
+const currentTabIndex = ref(1)
+const isTabFixed = ref(false)
 
 // 버튼 클릭 시, currentTabIndex를 메뉴에 맞는 숫자로 변경
 const handleClickTab = (tabIndex = 0) => {
   currentTabIndex.value = tabIndex
-
-  // 확인용 console.log
-  console.log(`isTab1Active: ${isTab1Active.value}`)
-  console.log(`isTab2Active: ${isTab2Active.value}`)
 }
-
-// DOM Element 저장
-// const tab1 = ref(null)
-// const tab2 = ref(null)
-
-const isTabFixed = ref(false)
 
 const fixTabWrapElement = () => {
   // 현재 스크롤바 위치
@@ -80,4 +77,21 @@ onMounted(() => {
 onBeforeUnmount(() => {
   throttleFunc.cancel()
 })
+
+// 특정값이 변화하면 함수를 실행해라
+watch(
+  // 매개변수 1 (감지할 값)
+  () => currentTabIndex.value,
+  // 매개변수 2 (값이 변화하면 실행할 함수)
+  (newVal, oldVal) => {
+    window.scroll({
+      top: props.visualHeight,
+      behavior: 'smooth',
+    })
+  },
+  // 매개변수 3 (watch 옵션)
+  {
+    immediate: true,
+  }
+)
 </script>
