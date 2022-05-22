@@ -1,6 +1,7 @@
 <template>
   <Navigation />
   <Visual />
+  <!-- Pull Request test -->
   <div id="container">
     <router-view> </router-view>
     <Footer />
