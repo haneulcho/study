@@ -2,7 +2,10 @@
   <transition name="loader">
     <PageLoader v-if="isPageLoaded" />
   </transition>
-  <Event />
+
+  <Test />
+
+  <Event :contents-width="width" />
 </template>
 
 <script setup>
@@ -12,6 +15,7 @@ import { ref } from 'vue'
 // import 컴포넌트명 from '컴포넌트경로/컴포넌트명.vue'
 import PageLoader from '@/components/PageLoader.vue'
 import Event from '@/components/Event.vue'
+import Test from '@/components/Test.vue'
 
 const isPageLoaded = ref(true)
 

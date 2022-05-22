@@ -107,6 +107,11 @@ import { ref, watch } from 'vue'
 import Popup from '@/components/Popup.vue'
 import Notice from '@/components/Notice.vue'
 
+import {
+    addBodyClass,
+    removeBodyClass
+} from '@/utils/helper'
+
 defineProps({
   index: {
     type: [Number, String]
@@ -116,20 +121,15 @@ defineProps({
 const showTooltip = ref(false)
 
 const openTooltip = () => {
-  showTooltip.value = !showTooltip.value
+  showTooltip.value = true
+  addBodyClass('locked-scroll')
+}
+const closeTooltip = () => {
+  showTooltip.value = false
+  removeBodyClass('locked-scroll')
 }
 
-
-watch(
-  () => showTooltip.value,
-  (newVal, oldVal) => {
-    if (newVal !== oldVal) {
-      if (showTooltip.value) {
-        document.querySelector('body').classList.add('locked-scroll');
-      } else {
-        document.querySelector('body').classList.remove('locked-scroll');
-      }
-    }
-  }
-)
+onBeforeUnmount(() => {
+    closeTooltip()
+})
 </script>

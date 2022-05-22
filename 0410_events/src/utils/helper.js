@@ -14,3 +14,11 @@ window.scroll({
   left: 0,
   behavior: 'smooth',
 });
+
+export const addBodyClass = (className) => {
+  document.querySelector('body').classList.add(className)
+}
+
+export const removeBodyClass = (className) => {
+  document.querySelector('body').classList.remove(className)
+}
