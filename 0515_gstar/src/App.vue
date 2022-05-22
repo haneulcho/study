@@ -2,6 +2,7 @@
   <Header />
   <Navigation />
   <Visual />
+  <!-- 수정수정 -->
   <div id="container">
     <transition name="fade"><router-view></router-view></transition>
     <Footer />
