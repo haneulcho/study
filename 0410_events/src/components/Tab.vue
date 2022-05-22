@@ -1,3 +1,5 @@
+Tab.vue
+
 <template>
   <!-- tab_nav_wrap - 필수 클래스 -->
   <!-- scrolled - isTabFixed 스크롤 위치에 따라 바꿀 클래스 -->
@@ -46,7 +48,7 @@ const props = defineProps({
   }
 })
 
-const currentTabIndex = ref(1)
+const currentTabIndex = ref(0)
 const isTabFixed = ref(false)
 
 // 버튼 클릭 시, currentTabIndex를 메뉴에 맞는 숫자로 변경

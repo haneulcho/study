@@ -42,7 +42,7 @@ body {overflow-x:hidden;background-color:#000}
 /* visual */
 #visual {position:relative;width:100%;height:911px;background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/visual/bg_visual.jpg') 50% 0 no-repeat}
 #visual h1 {width:286px;height:61px;padding-top:39px;margin:0 auto;}
-#visual h1 a{display:block;width:100%;height:100%;text-indent:-9999px;background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/visual/bg_bi.png') no-repeat}
+#visual h1 a{display:block;width:100%;height:61px;text-indent:-9999px;background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/visual/bg_bi.png') no-repeat}
 #visual .btn_movie {position:absolute;left:712px;top:540px}
 #visual .btn_movie a {display:block;width:472px;height:247px}
 #visual .rock {z-index:16;position:absolute;right:-680px;top:760px;display:block;width:279px;height:343px;background:url('http://s.nexon.com/s2/game/closers/2022/events/220407_advancement_zz103/visual/bg_rock.png') no-repeat}
@@ -105,13 +105,13 @@ button[class^="btn_"]:hover .ir {opacity:1}
 /* popup common */
 body.locked-scroll {height:100%;padding-right:17px;overflow:hidden;box-sizing:border-box}
 body.locked-scroll .layerPop {overflow-y:auto}
-.layerPop {position:fixed;display:flex;justify-content:center;align-items:center;top:0;left:0;width:100vw;height:100vh;overflow-y:auto;z-index:300;background-color:rgba(0, 0, 0, 0.7)}
-.layerPop .layerBody {position:relative;margin:0 auto;pointer-events:visible}
+.layerPop {display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100vw;height:100vh;overflow-y:auto;z-index:300;background-color:rgba(0, 0, 0, 0.7);}
+.layerPop .layerBody {position:relative;margin:0 auto;pointer-events:visible;}
 .layerPop .confirm {position:absolute;bottom:111px;left:50%;margin-left:-53px;z-index:8}
 .layerPop .confirm button {display:block;width:107px;height:50px;background:url(http://s.nexon.com/s2/game/closers/2021/events/210408_dungeon_429816/space.png);transition:all 350ms ease;transform-origin:center center}
 .layerPop .close {position:absolute;top:0px;right:0;z-index:8}
 .layerPop .close button {display:block;width:50px;height:50px;background:url(http://s.nexon.com/s2/game/closers/2021/events/210408_dungeon_429816/space.png);transition:all 350ms ease;transform-origin:center center}
-.overlay {display:none;position:fixed;z-index:299;top:0;left:0;width:100%;height:100%;background-color:#000;opacity:0.86}
+.overlay {position:fixed;z-index:299;top:0;left:0;width:100%;height:100%;background-color:#000;opacity:0.86}
 #pop_video .layerBody {width:1297px;height:797px}
 #pop_video .layerBody .ytb_wrap{width:100%;height:100%;box-sizing:border-box;border:10px solid #fff;}
 #pop_video .layerBody .ytb_wrap .video {width:100%;height:100%;background-color:#000;}

@@ -1,0 +1,16 @@
+/*
+넥슨 고딕 폰트
+*/
+@font-face {
+  font-family: 'NEXON Gothic';
+  src:url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot);src:url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.eot#iefix) format("embedded-opentype"),
+  url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF.woff) format("woff");
+  font-weight:400;
+}
+
+@font-face { 
+  font-family:'NEXON Gothic Bold';
+  src:url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF%20Bold.eot);
+  src:url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF%20Bold.eot#iefix) format("embedded-opentype"),url(https://rs.nxfs.nexon.com/home/fonts/NEXON%20Lv1%20Gothic%20OTF%20Bold.woff) format("woff");
+  font-weight:400;
+}

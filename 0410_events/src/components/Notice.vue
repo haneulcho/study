@@ -7,7 +7,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import noticeJSON from '@/sample/notice.json'
+import noticeJson from '@/sample/notice.json'
 
-const noticeList = ref(noticeJSON)
+const noticeList = ref(noticeJson)
 </script>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>[지스타] WE DELIVER JOY pengco</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow" />
+<meta name="title" content=">[지스타] WE DELIVER JOY" />
+<meta name="description" content="띵똥~ 배달왔어요!! 집밖은 위험해!! 우리집에서 딜리버리서비스~! 넥슨이 쏜다! 달콤한 게임 쿠폰도 놓치지마세요! 주의 ! 배달료 없음" />
+<meta property="og:url" content="" />
+<meta property="og:title" content=">[지스타] WE DELIVER JOY" />
+<meta property="og:description" content="띵똥~ 배달왔어요!! 집밖은 위험해!! 우리집에서 딜리버리서비스~! 넥슨이 쏜다! 달콤한 게임 쿠폰도 놓치지마세요! 주의 ! 배달료 없습니다." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="./css/style.css" type="text/css">
+
+<script type="text/javascript" src="./js/lib/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="./js/lib/gstar.ui.lib.js" charset="utf-8"></script>
+<script type="text/javascript" src="./js/lib/gstarAndNecojeObj.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="./js/lib/gameListObj.js" charset="utf-8"></script>
+<script type="text/javascript" src="./js/ui_eventOpen_70596wqbha.js" charset="utf-8"></script>
+
+<!--[if lt IE 9]>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- S: 넥슨 GNB -->
+<script src="http://rs.nxfs.nexon.com/common/js/gnb.min.js" data-gamecode="106497" data-ispublicbanner="true"></script>
+<!-- E: 넥슨 GNB   -->
+
+<div id="loader"></div>
+
+<div id="wrap">
+  <div id="header">
+    <div class="innerWrap">
+      <h1 class="logo"><a href="http://gstar.nexon.com/gstar2020/Home"><img src="https://ssl.nexon.com/s2/game/Gstar/2020/pc/update/img_logo.png" alt="WE DELIVER JOY"></a></h1>
+      <div class="sns">
+        <ul class="clearFix">
+          <li class="btn ytb"><a href="https://www.youtube.com/user/NEXONKR" target="_blank">유튜브 바로가기</a></li>
+          <li class="btn fb"><a href="https://www.facebook.com/NEXON.KR" target="_blank">페이스북 바로가기</a></li>
+          <li class="btn tw"><a href="https://twitter.com/NEXON_KR" target="_blank">트위터 바로가기</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="nav">
+    <div class="innerWrap">
+      <ul class="clearFix">
+        <li class="n0"><a href="#section0">지스타 2020</a></li>
+        <li class="n0"><a href="#section1">네코제 9</a></li>
+        <li class="n0"><a href="#section2">스페셜 허니 쿠폰</a></li>
+      </ul>
+    </div>
+    <span></span>
+  </div>
+
+  <div id="visual">
+    <div class="innerWrap">
+      <div class="group">
+        <h2 class="tit">WE DELIVER JOY NEXON G-STAR 2020</h2>
+        <p class="blind">2020.11.19(목) ~ 2020.11.22(일)</p>
+        <p class="btn movie"><a href="#popMovie">영상 팝업 보기</a></p>
+      </div>
+    </div>
+    <p class="btn twitch"><a href="https://www.twitch.tv/gstar" target="_blank">지스타 트위치 보러가기</a></p>
+    <div class="bgVideo">
+      <span class="cover"></span>
+    </div>
+  </div>
+
+  <div id="container">
+    <div id="section0" class="section">
+      <div class="innerWrap">
+        <div class="contents content_0">
+          <h3 class="blind">넥슨 신작 소개</h3>
+          <div id="kono">
+            <div id="konoSlide" class="slider"></div>
+          </div>
+          <div id="kurt">
+            <div id="kurtSlide" class="slider"></div>
+          </div>
+        </div>
+        <div class="contents content_1">
+          <h3 class="blind">지스타 예능 영상</h3>
+          <div id="movieList"></div>
+        </div>
+      </div>
+    </div>  
+
+    <div id="section1" class="section">
+      <div class="innerWrap">
+        <div class="blind">
+          <h3>네코제 9</h3>
+          <p>2020.11.27(목) ~ 2020.11.29(일)</p>
+        </div>
+        <div class="contents content_0">
+          <div id="necojeContents"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="footer">
+      <p class="blind">&copy; NEXON Korea Corporation All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <!-- S : 영상 팝업 -->
+  <div class="layerPop" id="popMovie" style="display:none;">
+    <div class="youtubeArea"></div>
+    <p class="btn close"><button type="button"></button></p>
+  </div>
+  <!-- E : 영상 팝업 -->
+
+  <!-- S : 대표 유의사항 팝업 -->
+  <div class="layerPop" id="popNotice" style="display:none;">
+    <div class="imgs">
+      <p class="btn close"><button type="button"></button></p>
+    </div>
+    <div class="back"></div>
+  </div>
+  <!-- E : 대표 유의사항 팝업 -->
+
+  <!-- S : 공통 유의사항 팝업 -->
+  <div class="layerPop" id="popCommNotice" style="display:none;">
+    <div class="imgs">
+      <p class="btn close"><button type="button"></button></p>
+    </div>
+    <div class="back"></div>
+  </div>
+  <!-- E : 공통 유의사항 팝업 -->
+
+</div>
+
+
+<div class="overlay"></div>
+</body>
+</html>
