@@ -13,14 +13,14 @@
               <div class="ytbArea typeIframe">
                 <iframe
                   v-if="currentVideoIdx === index"
-                  :src="`https://www.youtube.com/embed/${video[index]}?rel=0&autoplay=1`"
+                  :src="`https://www.youtube.com/embed/${videos[index]}?rel=0&autoplay=1`"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
 
                 <button type="button" @click="handleClickVideo(index)">
                   <div class="thBox">
-                    <img :src="`http://i3.ytimg.com/vi/${video[index]}/maxresdefault.jpg`" class="thumb" /> <span class="ico"></span>
+                    <img :src="`http://i3.ytimg.com/vi/${videos[index]}/maxresdefault.jpg`" class="thumb" /> <span class="ico"></span>
                     <span class="cover"></span>
                   </div>
                 </button>
@@ -28,14 +28,14 @@
 
               <div class="btns" v-if="currentVideoIdx === 2">
                 <p class="btn btn0"><a href="https://necoje.nexon.com/news/notice/view/152" target="_blank"></a></p>
-                  <p class="btn btn1"><a href="https://www.youtube.com/user/NEXONKR" target="_blank"></a></p>
+                <p class="btn btn1"><a href="https://www.youtube.com/user/NEXONKR" target="_blank"></a></p>
               </div>
               <div class="btns" v-else-if="currentVideoIdx === 3">
                 <p class="btn btn0"><a href="https://twitter.com/necoje" target="_blank"></a></p>
               </div>
               <div class="btns" v-else></div>
             </li>
-           <!-- 
+            <!-- 
             <li class="list1">
               <div class="ytbArea typeIframe">
                 <button type="button" data-param="5bDt08N4qZ0">
@@ -94,7 +94,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const video = ['Iv9-oQNCwyY', '5bDt08N4qZ0', 'reXgHcmaJXQ', 'ZKYp9nXVxDc']
+const videos = ['Iv9-oQNCwyY', '5bDt08N4qZ0', 'reXgHcmaJXQ', 'ZKYp9nXVxDc']
 
 const currentVideoIdx = ref(0)
 
