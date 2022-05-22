@@ -15,6 +15,8 @@ import Navigation from '@/components/Navigation.vue'
 import Footer from '@/components/Footer.vue'
 
 //const heightSize = [3790, 5050, 3660]
+
+console.log('git commit 연습')
 </script>
 
 <style scoped>

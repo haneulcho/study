@@ -50,12 +50,12 @@ const videoList = [
   { vods: '5bDt08N4qZ0' },
   {
     vods: 'reXgHcmaJXQ',
-    btns: [
-      { link: 'https://necoje.nexon.com/news/notice/view/152' },
-      { link: 'https://www.youtube.com/user/NEXONKR' }
-    ]
+    btns: [{ link: 'https://necoje.nexon.com/news/notice/view/152' }, { link: 'https://www.youtube.com/user/NEXONKR' }],
   },
   { vods: 'ZKYp9nXVxDc', btns: [{ link: 'https://twitter.com/necoje' }] },
-  { imgs: 'https://ssl.nexon.com/s2/game/Gstar/2020/pc/update/section1/img_schedule.png', btns: [{ link: 'https://necoje.nexon.com/main/index' }] },
+  {
+    imgs: 'https://ssl.nexon.com/s2/game/Gstar/2020/pc/update/section1/img_schedule.png',
+    btns: [{ link: 'https://necoje.nexon.com/main/index' }],
+  },
 ]
 </script>
