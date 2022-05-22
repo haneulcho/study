@@ -2,13 +2,20 @@
   <transition name="loader">
     <PageLoader v-if="isPageLoaded" />
   </transition>
+
   <Event :contents-width="width" />
 </template>
 
 <script setup>
 import { throttle } from 'throttle-debounce'
 import eventStyle from '@/styles/style.scss'
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { 
+  ref,
+  computed,
+  onMounted,
+  onBeforeUnmount,
+  watch
+  } from 'vue'
 
 // import 컴포넌트명 from '컴포넌트경로/컴포넌트명.vue'
 import PageLoader from '@/components/PageLoader.vue'

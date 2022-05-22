@@ -7,27 +7,6 @@
 </template>
 
 <script setup>
-import UsePopup from '@/composables/UsePopup'
-
-const {
-  openPopupIds,
-  closePopup,
-  openPopup
-} = UsePopup()
-
-console.log(openPopupIds.value)
-
-
-
-
-
-
-
-
-
-
-
-
 defineProps({
   popupId: {
     type: String,
@@ -37,11 +16,7 @@ defineProps({
 
 const emit = defineEmits(['on-popup-close'])
 
-// const openPopup = () => {
-
-// }
-
-// const closePopup = () => {
-//   emit('on-popup-close') // 부모 컴포넌트로 특정 이벤트를 올리겠다.
-// }
+const closePopup = () => {
+  emit('on-popup-close') // 부모 컴포넌트로 특정 이벤트를 올리겠다.
+}
 </script>

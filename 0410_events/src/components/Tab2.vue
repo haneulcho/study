@@ -50,15 +50,16 @@
                       </tr>
                       <tr>
                           <td><span class="blind">100</span></td>
-                          <td><span class="blind">3성 보스 무기 상자 (1종) x 1</span><a @click="openTooltip" href="#pop_tooltip" class="btn_more"></a></td>
+                          <td><span class="blind">3성 보스 무기 상자 (1종) x 1</span><a @click.prevent="openTooltip" href="#pop_tooltip" class="btn_more"></a></td>
 
                           <teleport to="body">
+                            <transition name="loader">
                             <template v-if="showTooltip">
                               <Popup
                                 popup-id="pop_tooltip" 
-                                @on-popup-close="showTooltip = !showTooltip" />
-                              <div class="overlay"></div>
+                                @on-popup-close="closeTooltip" />
                             </template>
+                            </transition>
                           </teleport>
                       </tr>
                   </tbody>
@@ -102,10 +103,14 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 
 import Popup from '@/components/Popup.vue'
 import Notice from '@/components/Notice.vue'
+import { 
+    addBodyClass,
+    removeBodyClass
+} from '@/utils/helper'
 
 defineProps({
   index: {
@@ -116,20 +121,16 @@ defineProps({
 const showTooltip = ref(false)
 
 const openTooltip = () => {
-  showTooltip.value = !showTooltip.value
+  showTooltip.value = true
+  addBodyClass('locked-scroll')
+ 
+}
+const closeTooltip = () => {
+  showTooltip.value = false
+  removeBodyClass('locked-scroll') 
 }
 
-
-watch(
-  () => showTooltip.value,
-  (newVal, oldVal) => {
-    if (newVal !== oldVal) {
-      if (showTooltip.value) {
-        document.querySelector('body').classList.add('locked-scroll');
-      } else {
-        document.querySelector('body').classList.remove('locked-scroll');
-      }
-    }
-  }
-)
+onBeforeUnmount(() => {
+    closeTooltip()
+})
 </script>
