@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 
-// Router
+// Router 2
 import router from '@/router'
 
 // Styles
