@@ -1,7 +1,7 @@
 <template>
   <Navigation />
   <Visual />
-  <!-- 주소가 바뀔 때, 해당하는 라우트를 보여줄 구역 -->
+  <!-- 주소가 바뀔 때 2, 해당하는 라우트를 보여줄 구역 -->
   <div id="container">
     <router-view>
     </router-view>
