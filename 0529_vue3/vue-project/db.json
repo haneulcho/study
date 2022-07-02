@@ -1,4 +1,22 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "nickname": "하늘"
+    },
+    {
+      "id": 2,
+      "nickname": "일식"
+    },
+    {
+      "id": 3,
+      "nickname": "도원"
+    },
+    {
+      "id": 4,
+      "nickname": "윤상"
+    }
+  ],
   "events": [
     {
       "param": "m-Pv80NwJCI",

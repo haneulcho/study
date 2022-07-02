@@ -1,5 +1,5 @@
 <template>
-  <div id="header" ref="$header" :class="headerClass">
+  <div id="header" :class="[{ 'fixed': isVisualOverScrolled }]">
     <div class="innerWrap">
       <h1 class="logo">
         <a href="http://gstar.nexon.com/gstar2020/Home"><img src="https://ssl.nexon.com/s2/game/Gstar/2020/pc/update/img_logo.png" alt="WE DELIVER JOY" /></a>
@@ -16,38 +16,19 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
+
+import { useUiStore } from '@/stores/ui'
 
 const { x: scrollTopX, y: scrollTopY } = useWindowScroll()
 
-const headerTopPos = computed(() => scrollTopY.value > 63 ? '0' : '63px')
-const headerClass = computed(() => scrollTopY.value >= 746 + 63 ? 'fixed' : '')
+const uiStore = useUiStore()
 
-// const $header = ref(null)
-const handleHeaderScroll = () => {
-  // console.log('scrolled!')
-  // Vue의 장점이 사라집니다. 이건 jQuery를 쓰는 것과 같아요.
-  // if (scrollTopY > 63) {
-  //   $header.style.top = '0'
-  // } else {
-  //   $header.style.top = '63px'
-  // }
+const isGnbOverScrolled = computed(() => scrollTopY.value > uiStore.gnbHeight)
+const isVisualOverScrolled = computed(() => scrollTopY.value >= (uiStore.visualHeight + uiStore.gnbHeight))
 
-// Vue의 장점이 사라집니다. 이건 jQuery를 쓰는 것과 같아요.
-  // if (scrollTopY >= 746 + 63) {
-  //   $header.classList.add('fixed')
-  // } else {
-  //   $header.classList.remove('fixed')
-  // }
-}
-
-// Vue의 장점이 사라집니다. 이건 jQuery를 쓰는 것과 같아요.
-// onMounted(() => {
-//   window.addEventListener('scroll', () => {
-//     handleHeaderScroll()
-//   })
-// })
+const headerTopPos = computed(() => isGnbOverScrolled.value ? '0' : `${uiStore.gnbHeight}px`)
 </script>
 
 <style scoped>

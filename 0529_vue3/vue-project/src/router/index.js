@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Route Components
+import Playground from '@/components/Playground.vue'
 import About from '@/components/About.vue'
 import Necoje from '@/components/Necoje.vue'
 import Event from '@/components/Event.vue'
 import pageNotFound from '@/components/pageNotFound.vue'
 
 const routes = [
+  { name: 'playground', path: '/playground', component: Playground },
   { name: 'home', path: '/', component: About },
   { name: 'about', path: '/about', component: About },
   { name: 'necoje', path: '/necoje', component: Necoje },

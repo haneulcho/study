@@ -865,52 +865,7 @@ $(window).on('load', function(){
 	
 
 
-}).on('scroll', function(e){
-	e.preventDefault();
-	gStarUI.fixNavPosition();
-
-	var scrollTop = parseInt($(window).scrollTop(), 10);
-	var gnbH = 63
-//	var sec0PosY = $('#section0').offset().top;
-//	var sec1PosY = $('#section1').offset().top;
-	//var sec2PosY = $('#section2').offset().top;
-
-
-
-	// if(scrollTop >= 0 && scrollTop < sec0PosY){
-	// 	$('#nav li').removeClass('on');
-
-	// }else if(scrollTop >= sec0PosY && scrollTop < sec1PosY){
-	// 	$('#nav li').removeClass('on');
-	// 	$('#nav li').eq(0).addClass('on');
-	// }else if(scrollTop >= sec1PosY && scrollTop < sec2PosY){
-	// 	$('#nav li').removeClass('on');
-	// 	$('#nav li').eq(1).addClass('on');
-	// }else if(scrollTop >= sec2PosY){
-	// 	$('#nav li').removeClass('on');
-	// 	$('#nav li').eq(2).addClass('on');
-	// }
-	if(scrollTop > 63){
-		$('#header').css('top', '0')
-	}else{
-		$('#header').css('top', '63px')
-	}
-
-
-	if(scrollTop >= 746 + 63){
-		$('#nav').addClass('fixed');
-		$('#header').addClass('fixed');
-		// $('#header .logo').addClass('resize');
-		// $('#header .sns').addClass('resize');
-	}else{
-		$('#nav').removeClass('fixed');
-		$('#header').removeClass('fixed');
-		
-		// $('#header .logo').removeClass('resize');
-		// $('#header .sns').removeClass('resize');
-	}
-
-
+})
 
 	gStarUI.fixNavPosition();
 

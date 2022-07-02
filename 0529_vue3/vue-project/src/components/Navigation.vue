@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" :class="[{ 'fixed': isVisualOverScrolled }]">
     <div class="innerWrap">
       <ul class="clearFix">
         <li class="n0">
@@ -9,7 +9,7 @@
           <router-link :to="{ name: 'necoje' }">네코제 9</router-link>
         </li>
         <li class="n0">
-          <router-link :to="{ name: 'event' }">스페셜 허니 쿠폰</router-link>
+          <router-link :to="{ name: 'event' }"><small>WE DELIVER JOY</small><p>쿠폰 이벤트</p></router-link>
         </li>
       </ul>
     </div>
@@ -39,6 +39,17 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
+import { useWindowScroll } from '@vueuse/core'
+
+import { useUiStore } from '@/stores/ui'
+
+const { x: scrollTopX, y: scrollTopY } = useWindowScroll()
+
+const uiStore = useUiStore()
+
+const isVisualOverScrolled = computed(() => scrollTopY.value >= (uiStore.visualHeight + uiStore.gnbHeight))
+
 //import { useRouter } from 'vue-router'
 
 //const router = useRouter()
@@ -54,4 +65,5 @@
 // }
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
